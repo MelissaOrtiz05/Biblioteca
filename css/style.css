@@ -1,0 +1,136 @@
+.ulc{
+	list-style-type:none;
+	
+	overflow:hidden;
+	background-color:#333;
+}
+li{
+	float: left;
+}
+li a{
+	display: block;
+	color:white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover{
+	background-color: #111;
+}
+.fondo{
+	background-color: #2e3a52;
+}
+.tituloT{
+	color: #3a5488;
+	text-align: center;
+	font-size: 30px;
+}
+p{
+	text-align: justify;
+}
+.parrafo { 
+	padding-left: 110px;
+	padding-right: 110px;
+	padding-top: 20px;
+	font-size: 18px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 180%;
+
+}
+
+.tablael{
+	padding-left: 110px;
+	padding-right: 110px;
+	padding-top: 20px;
+	font-size: 18px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer{
+	background-color: #2e3a52;
+	width: 100%;
+	color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.int{
+	padding-left: 10px;
+	padding-right: 110px;
+}
+
+.tamano{
+	width: 400px;
+	height: 25px;
+}
+.boton{
+	width: 150px;
+	height: 40px;
+	font-size: 14px;
+	background-color: #3a5488;
+	color: white;
+	
+}
+.tamanoC{
+	width:30px;
+}
+.tdContactenos{
+	padding-bottom: 30px;
+}
+.centra{
+
+text-align: center;
+}
+.tablaR{
+	padding: 20px;
+	text-align: center;
+}
+.lista{
+	font-size: 18px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 180%;}
+
+	div.parrafo{margin-bottom: 4%; margin-top: 4%;}
+	td.p1, td.p2, td.p3, td.p0, table.pr{ border: 2px solid black; text-align: center; border-collapse: collapse; font-family: unset}
+
+	table.pr{margin: 0px auto; width: 80%;}
+	td.p1, td.p2, td.p3, td.p0{ padding: 2%}
+
+h2{color: #3a5488; 
+	text-align: left; 
+	font-size: 20px; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.fyu{
+	margin: 0px auto; margin-bottom: 4%;
+}
+
+table.form{
+	margin: 0px auto; width: 80%;
+}
+
+td.input{
+	text-align: left;
+}
+
+td.maps{
+	text-align: right;
+}
+
+div.tvideos{
+	margin-bottom: 4%;
+	margin-top: 3%;
+}
+
+marquee.videosrecomendados{
+	font-size: 25px;
+	color: #3a5488;
+}
+
+
+h1{
+	color: #3a5488; 
+	font-size: 28px;
+	text-align: center;
+}
