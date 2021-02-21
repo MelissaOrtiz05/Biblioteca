@@ -20,6 +20,9 @@ li a:hover{
 }
 .fondo{
 	background-color: #2e3a52;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
 }
 .tituloT{
 	color: #3a5488;
@@ -49,11 +52,16 @@ p{
 
 footer{
 	background-color: #2e3a52;
-	width: 100%;
+	width: 1510px;
 	color: white;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+	text-align: center;
+  padding-bottom: 50px;
+  padding-right: 9px;
+  padding-top: 40px;
+
+	margin-bottom: -8px;
+	margin-left: -8px;
+	
 }
 .int{
 	padding-left: 10px;
@@ -64,6 +72,11 @@ footer{
 	width: 400px;
 	height: 25px;
 }
+.tamanocF{
+	width: 210px;
+	height: 15px;
+}
+
 .boton{
 	width: 150px;
 	height: 40px;
@@ -134,3 +147,17 @@ h1{
 	font-size: 28px;
 	text-align: center;
 }
+.fotoP{
+	padding: 80px;
+}
+.fondoT{
+	background: #ECF7F5;
+	padding-right:200px;
+	padding-left:200px;
+	padding-bottom: 20px;
+
+}
+.fondo4{
+	background: #ECF7F5;
+}
+
