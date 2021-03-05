@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promociones</title>
+    <title>Noticias</title>
     <script src="../js/js.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onload="cargarD()">
     <div class="fondo">
         <center>
             <img src="../img/noticias.jpg" alt="" width="100%">
@@ -19,16 +19,20 @@
 
         <ul class="ulc">
             <li class="lic"><a href="../index.html">Inicio</a></li>
-            <li class="lic"><a href="alquilerLibros.html">Alquilar libros</a></li>
+            <li class="lic"><a href="alquilerLibros.html">Alquilar de libros</a></li>
             <li class="lic"><a href="comprarLibro.html">Comprar libros</a></li>
             <li class="lic"><a href="noticias.html">Noticias</a></li>
             <li class="lic"><a href="contacto.html">Contactenos</a></li>
             <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
             <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
             <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
+            <li class="lic"><a href="pedido.html">Pedido</a></li>
+            <li class="lic"><a href="login.html" id="iniciar" >Login</a></li>
+            <li class="lic"><a href="" onclick="cerrar()"id="cerrarSesion">Cerrar Sesion</a></li>
+
         </ul>
     </div>
-    <br><br>
+    <br><br><h3 class="usu" id="nombreU"></h3> <br>
     <center>
    
         <h1 class="tituloT">Noticias</h1><br><br>

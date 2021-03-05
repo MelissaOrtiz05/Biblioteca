@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca</title>
-    <script src="js/js.js"></script>
+    <script src="../js/js.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onload="cargarD()">
     <div class="fondo">
         <center>
-            <img src="../img/ase.png" alt="" width="100%">
+            <img src="../img/1.jpg" alt="" width="100%">
         </center>
         <ul class="ulc">
             <li class="lic"><a href="../index.html">Inicio</a></li>
@@ -23,9 +23,15 @@
             <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
             <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
             <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
+            <li class="lic"><a href="pedido.html">Pedido</a></li>
+            <li class="lic"><a href="login.html" id="iniciar" >Login</a></li>
+            <li class="lic"><a href="" onclick="cerrar()" id="cerrarSesion">Cerrar Sesion</a></li>
+
         </ul>
     </div>
     <br><br>
+    <h3 class="usu" id="nombreU"></h3>
+    <br>
     <center>
         <h1 class="tituloT">Asesoria on-line</h1>
         <table>
@@ -61,13 +67,13 @@
 
     </tr>
     <tr>
-        <td><input type="text" name="Escribe" size="40px"><input type="button" name="enviar" value="Enviar" size="15px">
+        <td><input type="text" name="Escribe" size="50px" placeholder="Escribe aquí"><input type="button" name="enviar" value="Enviar" size="15px">
         </td>
     </tr>
     </table>
-
+<br><br>
     <footer>
-        BIBLIOTECA NACIONAL<br><br>
+        BIBLIOTECA NACIONAL<br>
         Dirección: Calle 24 5-60 <br>
         Código postal: 110311<br>
         Horario de Atención: Lunes a Viernes 8 am - 6 pm / Sábados 9 am - 4 pm

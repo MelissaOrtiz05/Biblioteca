@@ -160,4 +160,39 @@ h1{
 .fondo4{
 	background: #ECF7F5;
 }
+div.sucursales{margin-left: 10%;margin-right: 10%;}
 
+td.sucursales{text-align: center;}
+
+h2.sucursales{color: #3a5488; 
+	text-align: center; 
+	font-size: 18px; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif }
+
+h3.descripcion{text-align: center;font-size: 14px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+i.descripcion{color: #3a5488}
+
+body{
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.usu{
+	text-align: right;
+	padding-right:40px;
+}
+.fila{
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.fila2{
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 15px;
+
+}
+.pedido{
+	padding-left:400px;
+	padding-top: 40px;
+}

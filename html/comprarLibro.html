@@ -5,27 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar Libros</title>
+    <script src="../js/js.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onload="cargarD()">
     <!--ENCABEZADO-->
     <div class="fondo">
         <div class="encabezado">
             <img src="../img/Comprar.jpg" alt="" srcset="" width="100%">
             <ul class="ulc">
                 <li class="lic"><a href="../index.html">Inicio</a></li>
-                <li class="lic"><a href="comprarLibro.html">Comprar</a></li>
-                <li class="lic"><a href="alquilerLibros.html">Alquilar</a></li>
+                <li class="lic"><a href="alquilerLibros.html">Alquiler de libros</a></li>
+                <li class="lic"><a href="comprarLibro.html">Comprar libros</a></li>
                 <li class="lic"><a href="noticias.html">Noticias</a></li>
                 <li class="lic"><a href="contacto.html">Contactenos</a></li>
                 <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
                 <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
                 <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
+                <li class="lic"><a href="pedido.html">Pedido</a></li>
+                <li class="lic"><a href="login.html" id="iniciar" >Login</a></li>
+                <li class="lic"><a href="" onclick="cerrar()" id="cerrarSesion">Cerrar Sesion</a></li>
+    
             </ul>
         </div>
     </div>
     <!--PARRAFO-->
+    <br><h3 class="usu" id="nombreU"></h3>
     <br>
     <center>
         <h1 class="tituloT">¿Por qué comprar en la Biblioteca Nacional?</h1>

@@ -1,0 +1,27 @@
+[{
+    "usuario":"user1",
+    "contrasena":"passuser1",
+    "nombre": "Maria",
+    "apellido":"Arteta",
+    "tipo_usuario":"visitante",
+    "correo":"maria@hotmail.com"
+},
+{
+    "usuario":"user1",
+    "contrasena":"passuser1",
+    "nombre": "Martha",
+    "apellido":"Lopez",
+    "tipo_usuario":"visitante",
+    "correo":"martha@hotmail.com"
+},
+{
+    "usuario":"Admin",
+    "contrasena":"passAdmin",
+    "nombre": "Matias",
+    "apellido":"Gonzales",
+    "tipo_usuario":"administrador",
+    "correo":"admin@hotmail.com"
+}
+
+
+]

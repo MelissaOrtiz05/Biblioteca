@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <script src="../js/js.js"></script>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="cargarD()">
+    <div class="fondo">
+        <center>
+            <img src="../img/1.jpg" alt="" width="100%">
+        </center>
+
+        <ul class="ulc">
+            <li class="lic"><a href="../index.html">Inicio</a></li>
+            <li class="lic"><a href="alquilerLibros.html">Alquiler de libros</a></li>
+            <li class="lic"><a href="comprarLibro.html">Comprar libros</a></li>
+            <li class="lic"><a href="noticias.html">Noticias</a></li>
+            <li class="lic"><a href="contacto.html">Contactenos</a></li>
+            <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
+            <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
+            <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
+            <li class="lic"><a href="pedido.html">Pedido</a></li>
+            <li class="lic"><a href="login.html" id="iniciar">Login</a></li>
+            <li class="lic"><a href="" onclick="cerrar()" id="cerrarSesion">Cerrar Sesion</a></li>
+
+        </ul>
+    </div>
+    <br><br>
+    <h3 class="usu" id="nombreU"></h3> <br>
+    <center>
+        <h1 class="tituloT">Realiza tus pedidos para comer en las instalaciones de la biblioteca</h1>
+    </center><br>
+    <table class="pedido">
+        <tr>
+            <td class="tdContactenos"><label>$ perro caliente</label><br><input type="text" name="perroC"
+                    id="txtPerroC">
+            </td>
+            <td class="tdContactenos"><label>$ Hamburguesa</label><br><input type="text" name="hamburguesa"
+                    id="txtHamburguesa"></td>
+            <td class="tdContactenos"><label>$ Porción de pizza</label><br><input type="text" name="pizza"
+                    id="txtPizza"></td>
+            <td class="tdContactenos"><label>$ Salchipapa</label><br><input type="text" name="salchipapa"
+                    id="txtSalchipapa"></td>
+        </tr>
+        <tr>
+
+            <td class="tdContactenos"><label>Cantidad</label><br><input type="number" name="CanrtperroC"
+                    id="txtNumCPerro">
+            </td>
+            <td class="tdContactenos"><label>Cantidad</label><br><input type="number" name="Canthamburguesa"
+                    id="txtNumHamburguesa"></td>
+            <td class="tdContactenos"><label>Cantidad</label><br><input type="number" name="Cantpizza" id="txtNumPizza">
+            </td>
+            <td class="tdContactenos"><label>Cantidad</label><br><input type="number" name="Canrsalchipapa"
+                    id="txtNumSalchipapa"></td>
+        </tr>
+        <tr>
+            <td> <input type="radio" name="opcion" id="radioPeso">Peso <input type="radio" name="opcion"
+                    id="radioDolar">Dolar</td>
+
+        </tr>
+        <tr>
+            <td><br><input type="button" value="Calcular" class="boton" onclick="subPerro()"></td>
+            <td><br><input type="button" onclick="mostrar()" id="mostrar" class="boton" value="Mostrar">
+            <td><br><input type="button" onclick="limpiar()" class="boton" value="Limpiar"></td>
+        </tr>
+    </table>
+
+
+    <br><br>
+    <p id="res"></p>
+    <br><br>
+    <center>
+        <div id="tabla_datos2">
+            <table border="2" id="listp">
+                <tr>
+                    <th class="fila2">$ Perro Caliente</th>
+                    <th class="fila2">Cant perro</th>
+                    <th class="fila2">SubTotal Perro</th>
+                    <th class="fila2">$ Burger</th>
+                    <th class="fila2">Cant Burger</th>
+                    <th class="fila2">SubTotal Burger</th>
+                    <th class="fila2">$ pizza</th>
+                    <th class="fila2">Cant pizza</th>
+                    <th class="fila2">SubTotal pizza</th>
+                    <th class="fila2">$ Salchipapa</th>
+                    <th class="fila2">Cant Salchipapa</th>
+                    <th class="fila2">SubTotal Salchipapa</th>
+                    <th class="fila2">Tipo moneda</th>
+                    <th class="fila2">Total</th>
+
+
+                </tr>
+                <tbody id="elementos">
+
+                </tbody>
+                </tr>
+            </table>
+
+
+        </div>
+    </center>
+    <br><br>
+    <footer>
+        BIBLIOTECA NACIONAL<br><br>
+        Dirección: Calle 24 5-60 <br>
+        Código postal: 110311<br>
+        Horario de Atención: Lunes a Viernes 8 am - 6 pm / Sábados 9 am - 4 pm
+    </footer>
+</body>
+
+</html>

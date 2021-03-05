@@ -9,23 +9,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="cargarD()">
      <div class="fondo">
         <center>
             <img src="img/1.jpg" width="100%">
         </center>
         <ul class="ulc">
             <li class="lic"><a href="index.html">Inicio</a></li>
-            <li class="lic"><a href="html/alquilerLibros.html">Alquilar libros</a></li>
+            <li class="lic"><a href="html/alquilerLibros.html">Alquilar de libros</a></li>
             <li class="lic"><a href="html/comprarLibro.html">Comprar libros</a></li>                
             <li class="lic"><a href="html/noticias.html">Noticias</a></li>
             <li class="lic"><a href="html/contacto.html">Contactenos</a></li>
             <li class="lic"><a href="html/trabajaNosotros.html">Trabaja con Nosotros</a></li>
             <li class="lic"><a href="html/asesoria.html">Asesoría on-line</a></li>
             <li class="lic"><a href="html/Sucursales.html">Sucursales</a></li>
+            <li class="lic"><a href="html/pedido.html">Pedido</a></li>
+            <li class="lic"><a href="html/login.html" id="iniciar" >Login</a></li>
+            <li class="lic"><a href="" onclick="cerrar()" id="cerrarSesion">Cerrar Sesion</a></li>
+
+
         </ul>
     </div>
     <br><br>
+    <h3 class="usu" id="nombreU"></h3>
+    <br>
     <center>
         <h1 class="tituloT">Su historia</h1>
     </center>
@@ -98,7 +105,8 @@
         </tr>
     </table>
     <br><br>
-
+    <!--<input type="button" value="Enviar" onclick="cargarD()">
+    -->
     <marquee behavior="" direction="left"><img src="img/libro.png" alt=""></marquee>
     <br><br>
     <footer>

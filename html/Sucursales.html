@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursales</title>
+    <script src="../js/js.js"></script>
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body onload="cargarD()">
     <div class="fondo">
         <center>
             <img src="../img/1.jpg" alt="" width="100%">
@@ -20,9 +22,12 @@
             <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
             <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
             <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
+            <li class="lic"><a href="pedido.html">Pedido</a></li>
+            <li class="lic"><a href="login.html" id="iniciar" >Login</a></li>
+            <li class="lic"><a href="" onclick="cerrar()"id="cerrarSesion">Cerrar Sesion</a></li>
         </ul>
     </div>
-    <br><br>
+    <br><br><h3 class="usu" id="nombreU"></h3> <br>
     <h1><b>Sucursales</b></h1>
     <div class="sucursales">
         <table>
@@ -122,6 +127,7 @@
             </tr>
         </table>
     </div> 
+    <br><br>
      <footer>
         BIBLIOTECA NACIONAL<br><br>
         Dirección: Calle 24 5-60 <br>
