@@ -23,8 +23,7 @@
             <li class="lic"><a href="trabajaNosotros.html">Trabaja con Nosotros</a></li>
             <li class="lic"><a href="asesoria.html">Asesoría on-line</a></li>
             <li class="lic"><a href="Sucursales.html">Sucursales</a></li>
-            <li class="lic"><a href="pedido.html">Pedido</a></li>
-            <li class="lic"><a href="login.html" id="iniciar" >Login</a></li>
+            <li class="lic"><a href="login.html" id="iniciar">Login</a></li>
             <li class="lic"><a href="" onclick="cerrar()" id="cerrarSesion">Cerrar Sesion</a></li>
 
         </ul>
@@ -60,65 +59,82 @@
     <p class="parrafo">Así mismo, podrás consultar nuestras novedades y mantenerte al tanto de las mejores publicaciones
         que podrás tener de manera legal y fácil y conoce las <a href="noticias.html">noticias</a> más actuales que
         maneja la <b>Biblioteca Nacional</b> El material que solicites lo podrás disfrutar por 20 días calendario con la
-        posibilidad de renovarlo una vez a través de nuestro catálogo en línea.</p>
+        posibilidad de renovarlo una vez a través de nuestro catálogo en línea. <br><br> <b></b> Para efectuar la compra
+        debe seleccionar la catidad de libros que usted desea, si hay un libro que no desea alquilar deje el campo
+        vacio</BR></p>
     <center>
         <table border="1">
             <tr>
                 <td rowspan="3" class="tablaR boton"> Libro Misterio y terror</td>
-                <td class="tablaR"><img src="../img/libro1.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input class="boton" type="button" name="alquilar"
-                        value="Alquilar"></td>
-                <td class="tablaR"><img src="../img/libro2.jpeg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
+                <td class="tablaR"><img src="../img/libro1.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt1" class="tamanoC"><br><br></td>
+                <td class="tablaR"><img src="../img/libro2.jpeg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt2" class="tamanoC"><br>
+                    <br< /td>
             </tr>
             <tr>
-                <td class="tablaR"><img src="../img/libro3-1.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
-                <td class="tablaR"><img src="../img/libro3.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
+                <td class="tablaR"><img src="../img/libro3-1.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt3" class="tamanoC"><br><br></td>
+                <td class="tablaR"><img src="../img/libro3.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt4" class="tamanoC"><br><br></td>
             </tr>
         </table>
         <table border="1">
             <tr>
                 <td rowspan="3" class="tablaR boton">Romance y drama</td>
-                <td class="tablaR"><img src="../img/libro4.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"> </td>
-                <td class="tablaR"><img src="../img/libro8.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
+                <td class="tablaR"><img src="../img/libro4.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt5" class="tamanoC"><br><br> </td>
+                <td class="tablaR"><img src="../img/libro8.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt6" class="tamanoC"><br><br></td>
             </tr>
             <tr>
-                <td class="tablaR"><img src="../img/libro5.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
-                <td class="tablaR"><img src="../img/libro9.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
+                <td class="tablaR"><img src="../img/libro5.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt7" class="tamanoC"><br><br></td>
+                <td class="tablaR"><img src="../img/libro9.jpg" width="190px" height="290px"><br>$30.000 <input
+                        type="number" id="txt8" class="tamanoC"><br><br></td>
             </tr>
         </table>
-        <table border="1">
-            <tr>
-                <td rowspan="3" class="tablaR boton"> Ficción e infantil </td>
-                <td class="tablaR"><img src="../img/libro13.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"> </td>
-                <td class="tablaR"><img src="../img/libro12.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
-            </tr>
-            <tr>
-                <td class="tablaR"><img src="../img/libro14.jpeg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
-                <td class="tablaR"><img src="../img/libro15.jpg" width="190px" height="270px"><br>$30.000 <input
-                        type="number" class="tamanoC"><br><br><input type="button" class="boton" name="alquilar"
-                        value="Alquilar"></td>
-            </tr>
-        </table>
+
+        <br><br><br>
+        <input type="button" class="boton" onclick="alquilarAlq()" name="alquilar" value="Alquilar">
+        <input type="button" class="boton" onclick="mostrarAlq()" name="mostrar" value="Mostrar">
+        <input type="button" class="boton" onclick="limpiar()" name="limpiar" value="Limpiar">
+
+        <br><br><br>
+        <div id="tabla_datos">
+            <table border="2" id="listarA">
+                <tr>
+                    <th class="fila">Cant 1° libro</th>
+                    <th class="fila">SubT 1° libro</th>
+                    <th class="fila">Cant 2° libro</th>
+                    <th class="fila">SubT 2° libro</th>
+                    <th class="fila">Cant 3° libro</th>
+                    <th class="fila">SubT 3° libro</th>
+                    <th class="fila">Cant 4° libro</th>
+                    <th class="fila">SubT 4° libro</th>
+                    <th class="fila">Cant 5° libro</th>
+                    <th class="fila">SubT 5° libro</th>
+                    <th class="fila">Cant 6° libro</th>
+                    <th class="fila">SubT 6° libro</th>
+                    <th class="fila">Cant 7° libro</th>
+                    <th class="fila">SubT 7° libro</th>
+                    <th class="fila">Cant 8° libro</th>
+                    <th class="fila">SubT 8° libro</th>
+                    <th class="fila">Total</th>
+
+
+                </tr>
+                <tr>
+
+                    <tbody id="elementosA">
+
+                    </tbody>
+                </tr>
+            </table>
+
+        </div>
+
+
         <p class="parrafo"><b>Recuerda:</b> que si tienes préstamos puedes devolverlos cuando solicites nuevos libros.
             Al volver a las bibliotecas, los materiales quedan en cuarentena, si siguen apareciendo en tu cuenta por
             unos días, es normal <i>¡No te preocupes!</i></p>
@@ -126,7 +142,8 @@
                 href="http://www.saludcapital.gov.co/Paginas2/Inicio.aspx"> Secretaría de Salud</a>, así que la
             <b>Biblioteca Nacional</b> garantiza que los libros y otros materiales que lleven a tu casa en préstamo se
             haga con las medidas de salubridad pertinentes.Culaquier duda o inquietud escribenos dando clik <a
-                href="contacto.html">aquí.</a></p>
+                href="contacto.html">aquí.</a>
+        </p>
         <br><br>
     </center>
 

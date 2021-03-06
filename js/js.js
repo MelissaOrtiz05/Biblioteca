@@ -1,290 +1,281 @@
-function ocultar(){
-    var div=document.getElementById('imgN');
-    div.style.display='none';
+function ocultar() {
+  var div = document.getElementById('imgN');
+  div.style.display = 'none';
 }
 
-function mostrar(){
-    var div=document.getElementById('imgN');
-    div.style.display='';
+function mostrar() {
+  var div = document.getElementById('imgN');
+  div.style.display = '';
 }
 
 var inicio;
 
-function iniciarSesion(){
- 
-var correo=document.getElementById('txtusu').value;
-var passw=document.getElementById('txtpass').value;
-if((correo=="")&& (passw=="")){
-  if(correo==""){
-    alert ("Debe ingresar un correo valido");
-  }else if(passw==""){
-    alert ("Debe ingresar una contraseña");
-  }
-}else{
-fetch('../js/arch.json')
-  .then(function(resp){
-   return resp.json();
-})
-  .then(function(datos){
-    console.log(datos);
-datos.forEach(function(validar) {
-  if (validar.correo==correo){
-    if(validar.contrasena==passw){
-     // alert(validar.nombre+" "+validar.apellido)
-     intento=true
-      inicio=`${validar.nombre} ${validar.apellido}`
-     bandera=true
-     localStorage.setItem("Inicio", inicio)
-     window.location=("../index.html")
-    }else{
-      alert("incorrecto contraseña")
+function iniciarSesion() {
 
-      bandera=true
+  var correo = document.getElementById('txtusu').value;
+  var passw = document.getElementById('txtpass').value;
+  if ((correo == "") && (passw == "")) {
+    if (correo == "") {
+      alert("Debe ingresar un correo valido");
+    } else if (passw == "") {
+      alert("Debe ingresar una contraseña");
     }
-  
-  }else{
-    bandera=false
-  }
-});
-if(bandera==null){
-  alert("usuario no existe")
-}
+  } else {
+    fetch('../js/arch.json')
+      .then(function (resp) {
+        return resp.json();
+      })
+      .then(function (datos) {
+        console.log(datos);
+        datos.forEach(function (validar) {
+          if (validar.correo == correo) {
+            if (validar.contrasena == passw) {
+              intento = true
+              inicio = `${validar.nombre} ${validar.apellido}`
+              bandera = true
+              localStorage.setItem("Inicio", inicio)
+              window.location = ("../index.html")
+            } else {
+              alert("incorrecto contraseña")
 
-})
-}   
+              bandera = true
+            }
+
+          } else {
+            bandera = false
+          }
+        });
+        if (bandera == null) {
+          alert("usuario no existe")
+        }
+
+      })
+  }
 }
 var usua
-miStorage=window.localStorage;
+miStorage = window.localStorage;
 
-function cargarD(){
- usua=miStorage.getItem('Inicio')
- document.getElementById('nombreU').innerHTML=usua;
-var login=document.getElementById('iniciar');
-var cerrarS=document.getElementById('cerrarSesion');
-if(usua!=null){
-  login.style.display='none';
-  cerrarS.style.display='';
+function cargarD() {
+  usua = miStorage.getItem('Inicio')
+  document.getElementById('nombreU').innerHTML = usua;
+  var login = document.getElementById('iniciar');
+  var cerrarS = document.getElementById('cerrarSesion');
+  if (usua != null) {
+    login.style.display = 'none';
+    cerrarS.style.display = '';
 
-}else{
-  login.style.display='';
-  cerrarS.style.display='none';
+  } else {
+    login.style.display = '';
+    cerrarS.style.display = 'none';
+  }
+
 }
 
-}
-
-function cerrar(){
+function cerrar() {
   miStorage.clear();
-  window.location="../index.html";
+  window.location = "../index.html";
 
 }
-var arregloInfo=localStorage.getItem("arregloInfo");
-arregloInfo=JSON.parse(arregloInfo);
-if(arregloInfo==null){
-  arregloInfo=[];
+var arregloInfo = localStorage.getItem("arregloInfo");
+arregloInfo = JSON.parse(arregloInfo);
+if (arregloInfo == null) {
+  arregloInfo = [];
 }
-//var arregloInfo=[];
-miespacio=window.localStorage
+miespacio = window.localStorage
 
-function guardarCont(){
-  var nombreDigitado=document.getElementById("txtnombre").value;
-  var pApellidoADigitado=document.getElementById("txtpApellido").value;
-  var SApellidoDigitado=document.getElementById("txtsApellido").value;
-  var correoDigitado=document.getElementById("txtCorreo").value;
-  var fechaNacDigitado=document.getElementById("dateFecha").value;
-  var edadDigitado=document.getElementById("txtEdad").value;
-  var telefonoDigitado=document.getElementById("txtTelefono").value;
-  var tipoLibroDigitado=document.getElementById("opcion").value;
-  if(document.getElementById('precios').checked){
-    var cheq="Precios";
-  }else if(document.getElementById('consultarLi').checked){
-    var cheq="Consultar libro";
-  }else if(document.getElementById('consultarCom').checked){
-    var cheq="Consultar compra de libros";
-  }else if(document.getElementById('consultarAlq').checked){
-    var cheq="Consultar alquiler de libros";
+function guardarCont() {
+  var nombreDigitado = document.getElementById("txtnombre").value;
+  var pApellidoADigitado = document.getElementById("txtpApellido").value;
+  var SApellidoDigitado = document.getElementById("txtsApellido").value;
+  var correoDigitado = document.getElementById("txtCorreo").value;
+  var fechaNacDigitado = document.getElementById("dateFecha").value;
+  var edadDigitado = document.getElementById("txtEdad").value;
+  var telefonoDigitado = document.getElementById("txtTelefono").value;
+  var tipoLibroDigitado = document.getElementById("opcion").value;
+  if (document.getElementById('precios').checked) {
+    var cheq = "Precios";
+  } else if (document.getElementById('consultarLi').checked) {
+    var cheq = "Consultar libro";
+  } else if (document.getElementById('consultarCom').checked) {
+    var cheq = "Consultar compra de libros";
+  } else if (document.getElementById('consultarAlq').checked) {
+    var cheq = "Consultar alquiler de libros";
   }
-  
-  if(document.getElementById('F').checked){
-    var generoDig="Femenino";
-  }else if(document.getElementById('M').checked){
-    var generoDig="Masculino";
+
+  if (document.getElementById('F').checked) {
+    var generoDig = "Femenino";
+  } else if (document.getElementById('M').checked) {
+    var generoDig = "Masculino";
   }
-  if((nombreDigitado=="")||(pApellidoADigitado=="")||(SApellidoDigitado=="")||(correoDigitado=="")||(fechaNacDigitado=="")||(edadDigitado=="")||(telefonoDigitado=="")||(cheq.checked= false)||(generoDig.checked= false)){
+  if ((nombreDigitado == "") || (pApellidoADigitado == "") || (SApellidoDigitado == "") || (correoDigitado == "") || (fechaNacDigitado == "") || (edadDigitado == "") || (telefonoDigitado == "") || (cheq.checked = false) || (generoDig.checked = false)) {
     alert("Debe llenar todos los campos")
-  }else{
-    var newC={
-      nombre:nombreDigitado,
-      pApellido:pApellidoADigitado,
-      sApellido:SApellidoDigitado,
-      correo:correoDigitado,
-      fechaNac:fechaNacDigitado,
-      edad:edadDigitado,
-      telefono:telefonoDigitado,
-      tipoLibro:tipoLibroDigitado,
-      motivo:cheq,
-      genero:generoDig
+  } else {
+    var newC = {
+      nombre: nombreDigitado,
+      pApellido: pApellidoADigitado,
+      sApellido: SApellidoDigitado,
+      correo: correoDigitado,
+      fechaNac: fechaNacDigitado,
+      edad: edadDigitado,
+      telefono: telefonoDigitado,
+      tipoLibro: tipoLibroDigitado,
+      motivo: cheq,
+      genero: generoDig
     };
 
-arregloInfo.push(newC);
-miespacio.setItem('arregloInfo',JSON.stringify(arregloInfo));
-alert("Datos guardados");
+    arregloInfo.push(newC);
+    miespacio.setItem('arregloInfo', JSON.stringify(arregloInfo));
+    alert("Datos guardados");
 
-limpiarFormu();
-}
-
-}
-function limpiarFormu(){
-  document.getElementById("txtnombre").value="";
-  document.getElementById("txtpApellido").value="";
-  document.getElementById("txtsApellido").value="";
-  document.getElementById("txtCorreo").value="";
-  document.getElementById("dateFecha").value="";
-  document.getElementById("txtEdad").value="";
-  document.getElementById("txtTelefono").value="";
-  document.getElementById("opcion").value="Terror";
-  document.getElementById('precios').checked= false;
-  document.getElementById('consultarLi').checked= false;
-  document.getElementById('consultarCom').checked= false;
-  document.getElementById('consultarAlq').checked= false;
-  document.getElementById("F").checked= false;
-  document.getElementById("M").checked= false;
-}
-function mostrarT(){
-  var enca=document.getElementById("tabla_datos")
-  enca.style.display='';
-
-tablallena="";
-tabla_datos
-for(var i=0;i<arregloInfo.length;i++){
-  var cuerpo=document.getElementById("elementos")
-  var cli =arregloInfo[i];
-  tablallena+="<tr><td>"+cli.nombre+"</td><td>"+cli.pApellido+"</td><td>"+cli.sApellido+"</td><td>"+cli.correo+"</td><td>"+cli.fechaNac+"</td><td>"+cli.telefono+"</td><td>"+cli.tipoLibro+"</td><td>"+cli.motivo+"</td><td>"+cli.genero+"</td></tr>"
-  cuerpo.innerHTML=tablallena;
-}  
-}
-Elemento=-1
-function editarF(){
- var nombreDigitado=document.getElementById("txtnombre").value;
- var pApellidoADigitado=document.getElementById("txtpApellido").value;
-
- for(var i=0;i<arregloInfo.length;i++){
-  var cli =arregloInfo[i];
-  var SApellidoDigitado=document.getElementById("txtsApellido").value;
-
- if((cli.nombre==nombreDigitado)&&(cli.pApellido==pApellidoADigitado)){
-   
-     arregloInfo[Elemento]={     
-      apellidoS:SApellidoDigitado
-     } ;      
-     alert(arregloInfo.apellidoS)
-  miespacio.setItem("arregloInfo",JSON.stringify(arregloInfo));
-alert("almacenado")
-
-  }else{
-  alert("Dato no encontrado")
-} }
-
+    limpiarFormu();
+  }
 
 }
-var arregloPed=localStorage.getItem("arregloPed");
-arregloPed=JSON.parse(arregloPed);
-if(arregloPed==null){
-    arregloPed=[];
+function limpiarFormu() {
+  document.getElementById("txtnombre").value = "";
+  document.getElementById("txtpApellido").value = "";
+  document.getElementById("txtsApellido").value = "";
+  document.getElementById("txtCorreo").value = "";
+  document.getElementById("dateFecha").value = "";
+  document.getElementById("txtEdad").value = "";
+  document.getElementById("txtTelefono").value = "";
+  document.getElementById("opcion").value = "Terror";
+  document.getElementById('precios').checked = false;
+  document.getElementById('consultarLi').checked = false;
+  document.getElementById('consultarCom').checked = false;
+  document.getElementById('consultarAlq').checked = false;
+  document.getElementById("F").checked = false;
+  document.getElementById("M").checked = false;
 }
-miespacio=window.localStorage
+function mostrarT() {
+  var enca = document.getElementById("tabla_datos")
+  enca.style.display = '';
 
-function subPerro(){
- 
-    var perroC=document.getElementById('txtPerroC').value;
-    var CanrtperroC=document.getElementById('txtNumCPerro').value;
+  tablallena = "";
+  tabla_datos
+  for (var i = 0; i < arregloInfo.length; i++) {
+    var cuerpo = document.getElementById("elementos")
+    var cli = arregloInfo[i];
+    tablallena += "<tr><td>" + cli.nombre + "</td><td>" + cli.pApellido + "</td><td>" + cli.sApellido + "</td><td>" + cli.correo + "</td><td>" + cli.fechaNac + "</td><td>" + cli.telefono + "</td><td>" + cli.tipoLibro + "</td><td>" + cli.motivo + "</td><td>" + cli.genero + "</td></tr>"
+    cuerpo.innerHTML = tablallena;
+  }
+}
+Elemento = -1
+function editarF() {
+  var nombreDigitado = document.getElementById("txtnombre").value;
+  var pApellidoADigitado = document.getElementById("txtpApellido").value;
 
-     var hamburguesa=document.getElementById('txtHamburguesa').value;
-     var Canthamburguesa=document.getElementById('txtNumHamburguesa').value;
-     var pizza=document.getElementById('txtPizza').value;
-     var Cantpizza=document.getElementById('txtNumPizza').value;
+  for (var i = 0; i < arregloInfo.length; i++) {
+    var cli = arregloInfo[i];
+    var SApellidoDigitado = document.getElementById("txtsApellido").value;
 
-     
-     var salchipapa=document.getElementById('txtSalchipapa').value;
-     var Canrsalchipapa=document.getElementById('txtNumSalchipapa').value;
-    
-   
-    if(document.getElementById('radioPeso').checked){
-        var moneda="Peso";
-      }else if(document.getElementById('radioDolar').checked){
-        var moneda="Dolar";
-      }
+    if ((cli.nombre == nombreDigitado) && (cli.pApellido == pApellidoADigitado)) {
 
-      if(document.getElementById('radioPeso').checked){
-        var perroCS=parseInt(perroC)*parseInt(CanrtperroC);
-        var hamburguesaS=parseInt(hamburguesa)*parseInt(Canthamburguesa);
-        var pizzaCant=parseInt(pizza)*parseInt(Cantpizza);
-        var salchipapaCant=parseInt(salchipapa)*parseInt(Canrsalchipapa);
-        var total=parseInt(perroCS)+parseInt(hamburguesaS)+parseInt(pizzaCant)+parseInt(salchipapaCant);
-        
-    
-    }else if(document.getElementById('radioDolar').checked){
-        var perroCS=CanrtperroC*(0.00028*perroC);
-        var hamburguesaS=Canthamburguesa*(hamburguesa*0.00028);
-        var pizzaCant=Cantpizza*(pizza*0.00028);
-        var salchipapaCant=Canrsalchipapa*(salchipapa*0.00028);
-        var total=parseFloat(perroCS)+parseFloat(hamburguesaS)+parseFloat(pizzaCant)+parseFloat(salchipapaCant);
-   
+      arregloInfo[Elemento] = {
+        apellidoS: SApellidoDigitado
+      };
+      alert(arregloInfo.apellidoS)
+      miespacio.setItem("arregloInfo", JSON.stringify(arregloInfo));
+      alert("almacenado")
+
+    } else {
+      alert("Dato no encontrado")
+    }
+  }
+
 
 }
+var arregloPed = localStorage.getItem("arregloPed");
+arregloPed = JSON.parse(arregloPed);
+if (arregloPed == null) {
+  arregloPed = [];
+}
+miespacio = window.localStorage
 
-if((perroC=="")||(CanrtperroC=="")||(moneda.checked=false)||(hamburguesa=="")||(Canthamburguesa=="")||(pizza=="")||(Cantpizza=="")||(salchipapa=="")||(Canrsalchipapa=="")){
-  alert("Debe llenar todos los campos")
-}else{
-  var newPe={
-      precioP:perroC,
-      cantP:CanrtperroC,
-      sbperro:perroCS,
-      tpMoneda:moneda,
-      precioHa:hamburguesa,
-      cantH:Canthamburguesa,
-      sbHamb:hamburguesaS,
-      precioPi:pizza,
-      cantPi:Cantpizza,
-      sbPizz:pizzaCant,
-      precioSal:salchipapa,
-      cantSal:Canrsalchipapa,
-      sbSalc:salchipapaCant,
-      totalP:total
+function limpiar() {
+  document.getElementById("txtPerroC").value = "";
+  document.getElementById("txtHamburguesa").value = "";
+  document.getElementById("txtPizza").value = "";
+  document.getElementById("txtNumCPerro").value = "";
+  document.getElementById("txtNumHamburguesa").value = "";
+  document.getElementById("txtNumPizza").value = "";
+  document.getElementById("txtNumSalchipapa").value = "";
+  document.getElementById('radioDolar').checked = false;
+  document.getElementById('radioPeso').checked = false;
+}
+
+var arregloAl = localStorage.getItem("arregloAl");
+arregloAl = JSON.parse(arregloAl);
+if (arregloAl == null) {
+  arregloAl = [];
+}
+miespacio = window.localStorage
+function alquilarAlq() {
+  var libro1 = document.getElementById('txt1').value;
+  var libro2 = document.getElementById('txt2').value;
+  var libro3 = document.getElementById('txt3').value;
+  var libro4 = document.getElementById('txt4').value;
+  var libro5 = document.getElementById('txt5').value;
+  var libro6 = document.getElementById('txt6').value;
+  var libro7 = document.getElementById('txt7').value;
+  var libr8 = document.getElementById('txt8').value;
+
+  sblb1 = parseInt(libro1) * 30000
+  sblb2 = parseInt(libro2) * 30000
+  sblb3 = parseInt(libro3) * 30000
+  sblb4 = parseInt(libro4) * 30000
+  sblb5 = parseInt(libro5) * 30000
+  sblb6 = parseInt(libro6) * 30000
+  sblb7 = parseInt(libro7) * 30000
+  sblb8 = parseInt(libr8) * 30000
+
+  total = parseInt((libr8) * 30000) + parseInt((libro7) * 30000) + parseInt((libro6) * 30000) + parseInt((libro5) * 30000) + parseInt((libro4) * 30000) + parseInt((libro3) * 30000) + parseInt((libro2) * 30000) + parseInt((libro1) * 30000)
+
+  var newAl = {
+    lib1: libro1,
+    lib2: libro2,
+    lib3: libro3,
+    lib4: libro4,
+    lib5: libro5,
+    lib6: libro6,
+    lib7: libro7,
+    lib8: libr8,
+    subt1: sblb1,
+    subt2: sblb2,
+    subt3: sblb3,
+    subt4: sblb4,
+    subt5: sblb5,
+    subt6: sblb6,
+    subt7: sblb7,
+    subt8: sblb8,
+    libTotal: total
   };
-
-
-arregloPed.push(newPe);
-miespacio.setItem('arregloPed',JSON.stringify(arregloPed));
-alert("Datos guardados");
-//document.getElementById('res').innerHTML='Total '+totalD;
-limpiar();
-}
-}
-function mostrar(){
-
-      
-      tablallena="";
-      for(var i=0;i<arregloPed.length;i++){
-        var cuerpo=document.getElementById("elementos")
-        var cli =arregloPed[i];
-        tablallena+="<tr><td>"+cli.precioP+"</td><td>"+cli.cantP+"</td><td>"+cli.sbperro+"</td><td>"+cli.precioHa+"</td><td>"+cli.cantH+"</td><td>"+cli.sbHamb+"</td><td>"+cli.precioPi+"</td><td>"+cli.cantPi+"</td><td>"+cli.sbPizz+"</td><td>"+cli.precioSal+"</td><td>"+cli.cantSal+"</td><td>"+cli.sbSalc+"</td><td>"+cli.tpMoneda+"</td><td>"+cli.totalP+"</td></tr>"
-        cuerpo.innerHTML=tablallena;
-      }  
-      
+  arregloAl.push(newAl);
+  miespacio.setItem('arregloAl', JSON.stringify(arregloAl));
+  alert("Datos guardados");
+  limpiar()
 }
 
-function limpiar(){
-    document.getElementById("txtPerroC").value="";
-    document.getElementById("txtHamburguesa").value="";
-    document.getElementById("txtPizza").value="";
-    document.getElementById("txtNumCPerro").value="";
-    document.getElementById("txtNumHamburguesa").value="";
-    document.getElementById("txtNumPizza").value="";
-    document.getElementById("txtNumSalchipapa").value="";
-    document.getElementById('radioDolar').checked= false;
-    document.getElementById('radioPeso').checked= false;
-} 
+function limpiar() {
+  document.getElementById('txt1').value = "";
+  document.getElementById('txt2').value = "";
+  document.getElementById('txt3').value = "";
+  document.getElementById('txt4').value = "";
+  document.getElementById('txt5').value = "";
+  document.getElementById('txt6').value = "";
+  document.getElementById('txt7').value = "";
+  document.getElementById('txt8').value = "";
+}
+function mostrarAlq() {
+  tablallena = "";
 
+  for (var i = 0; i < arregloAl.length; i++) {
 
+    var cuerpo = document.getElementById("elementosA");
+    var cli = arregloAl[i];
 
+    tablallena += "<tr><td>" + cli.lib1 + "</td><td>" + cli.subt1 + "</td><td>" + cli.lib2 + "</td><td>" + cli.subt2 + "</td><td>" + cli.lib3 + "</td><td>" + cli.subt3 + "</td><td>" + cli.lib4 + "</td><td>" + cli.subt4 + "</td><td>" + cli.lib5 + "</td><td>" + cli.subt5 + "</td><td>" + cli.lib6 + "</td><td>" + cli.subt6 + "</td><td>" + cli.lib7 + "</td><td>" + cli.subt7 + "</td><td>" + cli.lib8 + "</td><td>" + cli.subt8 + "</td><td>" + cli.libTotal + "</td></tr>"
+    cuerpo.innerHTML = tablallena;
+  }
 
+}
